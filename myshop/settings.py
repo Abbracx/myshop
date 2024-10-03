@@ -122,8 +122,8 @@ STATIC_URL = "static/"
 
 # MEDIA_URL is the base URL that serves media files uploaded by users.
 # MEDIA_ROOT is the local path where these files reside.
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 # Default primary key field type
