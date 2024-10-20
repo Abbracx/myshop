@@ -47,11 +47,13 @@ class Cart(object):
 
     def save(self):
         # mark the session as "modified" to make sure it gets saved
+        self.session[settings.CART_SESSION_ID] = self.cart
         self.session.modefied = True
 
     def clear(self):
         # remove cart from session
         del self.session[settings.CART_SESSION_ID]
+        del self.cart[settings.CART_SESSION_ID]
         self.save()
 
     def __iter__(self):
