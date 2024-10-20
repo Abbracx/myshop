@@ -135,3 +135,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Cart Session
 CART_SESSION_ID = "cart"
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

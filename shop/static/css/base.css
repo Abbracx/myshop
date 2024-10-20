@@ -328,3 +328,13 @@ form div.field {
     color:#666;
     border-radius:4px;
 }
+
+.success-message {
+    background-color: #28a745; /* Solid green background */
+    color: white; /* White text */
+    border: 1px solid #218838; /* Darker green border */
+    padding: 15px; /* Spacing inside the message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    margin: 10px 0; /* Space above and below */
+}

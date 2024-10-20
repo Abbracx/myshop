@@ -4,7 +4,7 @@ from cart.forms import CartAddProductForm
 
 from shop.models import Product
 from cart.cart import Cart
-
+from django.contrib import messages
 
 @require_POST
 def cart_add(request, product_id):
@@ -22,6 +22,10 @@ def cart_add(request, product_id):
             override_quantity=cd['override']
             
         )
+        if cd['override']:
+            messages.success(request, "Cart Item updated successfully.")
+        else:
+            messages.success(request, "New item added successfully.")
     
     return redirect('cart:cart_detail')
 
